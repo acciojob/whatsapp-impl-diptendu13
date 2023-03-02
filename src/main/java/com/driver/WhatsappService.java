@@ -38,12 +38,12 @@ public class WhatsappService {
         }
     }
 
-    public String changeAdmin(User approver, User user, Group group) {
+    public String changeAdmin(User approver, User user, Group group) throws RuntimeException {
         try{
             return whatsappRepository.changeAdmin(approver, user, group);
         }
         catch (Exception e){
-            throw new RuntimeException(e.initCause(e));
+            throw new RuntimeException(e);
         }
     }
 
