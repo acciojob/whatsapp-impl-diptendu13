@@ -34,7 +34,7 @@ public class WhatsappService {
             return whatsappRepository.sendMessage(message, sender, group);
         }
         catch (Exception e){
-            throw new RuntimeException(e.toString());
+            throw new RuntimeException(e);
         }
     }
 
@@ -43,7 +43,7 @@ public class WhatsappService {
             return whatsappRepository.changeAdmin(approver, user, group);
         }
         catch (Exception e){
-            throw new RuntimeException(e.toString());
+            throw new RuntimeException(e);
         }
     }
 
@@ -52,7 +52,7 @@ public class WhatsappService {
             return whatsappRepository.removeUser(user);
         }
         catch(Exception e){
-            throw new RuntimeException(e.toString());
+            throw new RuntimeException(e);
         }
     }
 
@@ -61,7 +61,7 @@ public class WhatsappService {
             return whatsappRepository.findMessage(start, end, k);
         }
         catch(Exception e){
-            throw new RuntimeException(e.toString());
+            throw new RuntimeException(e);
         }
     }
 }
