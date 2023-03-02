@@ -43,7 +43,7 @@ public class WhatsappService {
             return whatsappRepository.changeAdmin(approver, user, group);
         }
         catch (Exception e){
-            throw new RuntimeException(e.getCause());
+            throw new RuntimeException(e.initCause(e));
         }
     }
 
