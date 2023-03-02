@@ -34,7 +34,7 @@ public class WhatsappService {
             return whatsappRepository.sendMessage(message, sender, group);
         }
         catch (Exception e){
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 
